@@ -1,0 +1,92 @@
+import { ComponentLayout } from "components/layouts/ComponentLayout";
+import { Example } from "components/examples/Example";
+import { DemoCharacterCount, DefaultCharacterCount, OverLimitCharacterCount } from "components/examples/CharacterCount";
+
+export const meta = {
+	title: "Character count",
+	description: "A text area that tells people how many characters they have left.",
+	npmUrl: "https://www.npmjs.com/package/@nice-digital/nds-character-count",
+	gitHubUrl: "https://github.com/nice-digital/nice-design-system/blob/main/components/nds-character-count",
+	component: DemoCharacterCount
+};
+
+Character count is a text area that tells people how many characters they have left as they type. It never stops them typing: if they go over the limit it shows an error and how many characters to remove.
+
+## When to use
+
+Use character count when there is a real limit on the length of an answer, for example a comment that is stored in a system with a fixed field length.
+
+## When not to use
+
+Do not use it to nudge people towards shorter answers when there is no real limit. Use a [textarea](/components/textarea/) with a hint instead.
+
+Do not use it for short, single-line answers. Use an [input](/components/input/).
+
+## How to use
+
+Set the limit with `maxLength` and give the field a `label` and a `name`. Use `hint` for any extra help.
+
+Tell people about the limit before they start, in the label or the hint, if it is likely to affect what they write.
+
+Check the limit again on the server. The component shows an error but does not prevent the form being submitted.
+
+## Variants
+
+## Default
+
+<Example>
+<DefaultCharacterCount />
+
+<CH.Code>
+```js React
+<CharacterCount label="Your comment" name="comment" maxLength={200} />
+```
+```html HTML
+<div class="character-count" data-component="character-count">
+	<div class="textarea" data-component="textarea">
+		<label class="textarea__label" for="comment">Your comment</label>
+		<textarea class="textarea__textarea" id="comment" name="comment" aria-describedby="comment-count"></textarea>
+	</div>
+	<p id="comment-count" aria-live="polite" class="character-count__message">You have 200 characters remaining</p>
+</div>
+```
+</CH.Code>
+</Example>
+
+## Over the limit
+
+When there are too many characters, the text area shows its error state and the message says how many to remove.
+
+<Example>
+<OverLimitCharacterCount />
+
+<CH.Code>
+```js React
+<CharacterCount
+	label="Short summary"
+	name="summary"
+	maxLength={20}
+	defaultValue="This summary is longer than twenty characters"
+/>
+```
+```html HTML
+<div class="character-count" data-component="character-count">
+	<div class="textarea textarea--error" data-component="textarea">
+		<label class="textarea__label" for="summary">Short summary</label>
+		<p class="textarea__error">Short summary must be 20 characters or fewer</p>
+		<textarea class="textarea__textarea" id="summary" name="summary" aria-describedby="summary-count">This summary is longer than twenty characters</textarea>
+	</div>
+	<p id="summary-count" aria-live="polite" class="character-count__message character-count__message--over">You have 25 characters too many</p>
+</div>
+```
+</CH.Code>
+</Example>
+
+## Accessibility
+
+- The count message is linked to the text area with `aria-describedby`, so screen readers read it with the label.
+- The message is a polite live region, so changes are announced without interrupting typing. This has been checked with automated tests only: test with screen readers before release, and consider delaying announcements until the user pauses.
+- Going over the limit is shown with text and weight as well as colour.
+- It builds on the textarea component and uses its label, hint and error states.
+
+export default ({ children }) => <ComponentLayout meta={meta}>{children}</ComponentLayout>;

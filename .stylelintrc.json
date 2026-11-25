@@ -1,0 +1,42 @@
+{
+	"extends": ["stylelint-config-standard-scss"],
+	"plugins": ["stylelint-declaration-strict-value"],
+	"rules": {
+		"color-no-hex": [true, { "message": "Use a NICE Design System colour token (colours.$...) instead of a hex colour" }],
+		"color-named": ["never", { "message": "Use a NICE Design System colour token (colours.$...) instead of a named colour" }],
+		"function-disallowed-list": [
+			["rgb", "rgba", "hsl", "hsla", "hwb", "lab", "lch", "oklab", "oklch", "color-mix"],
+			{ "message": "Use a NICE Design System colour token (colours.$...) instead of a raw colour function" }
+		],
+		"property-disallowed-list": [
+			["font-size", "font"],
+			{ "message": "Use @include typography.font-size(n) or a heading mixin from nds-core instead of setting font sizes directly" }
+		],
+		"scale-unlimited/declaration-strict-value": [
+			["font-family", "z-index"],
+			{
+				"ignoreValues": ["inherit", "initial", "unset", "auto"],
+				"message": "${property} must use a design system variable, not the raw value ${value}"
+			}
+		],
+		"declaration-property-value-disallowed-list": [
+			{
+				"/^(margin|padding|gap|row-gap|column-gap)/": ["/(^|[\\s(,])-?(\\d*\\.)?\\d*[1-9]\\d*(px|rem|em|pt)?(?=[\\s),]|$)/"]
+			},
+			{ "message": "Spacing must come from nds-core spacing tokens, for example utils.rem(spacing.$medium)" }
+		],
+		"declaration-no-important": true,
+		"selector-max-id": 0,
+		"selector-class-pattern": [
+			"^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+			{ "resolveNestedSelectors": true, "message": "Class names must be BEM: block, block__element, block--modifier" }
+		],
+		"at-rule-empty-line-before": null,
+		"declaration-empty-line-before": null,
+		"scss/double-slash-comment-empty-line-before": null,
+		"scss/at-mixin-pattern": null,
+		"scss/dollar-variable-empty-line-before": null,
+		"selector-pseudo-element-colon-notation": null,
+		"no-descending-specificity": null
+	}
+}

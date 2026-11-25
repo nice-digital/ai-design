@@ -1,0 +1,7 @@
+{
+	"title": "Combo box",
+	"description": "A text field with a filterable list of suggestions, based on the GOV.UK accessible autocomplete pattern",
+	"status": "sketch",
+	"figma": "",
+	"prompt": "make a sketch combo-box component using the GDS pattern if available"
+}

@@ -1,0 +1,14 @@
+# Who must approve changes to what.
+#
+# The last matching line wins, so the general rule comes first and the
+# designers' areas, which need no approval, come after it.
+
+# Everything is owned by the design system maintainers by default.
+# This covers how the workspace works: rules, checks, scripts, the preview app,
+# the catalogue, guidance, sources and the Figma map.
+*   @johndavey72
+
+# Designers' work: no owner, so no maintainer approval is needed.
+# A line with a path and no owner removes the default owner for that path.
+/sketches/
+/prototype/pages/designs/

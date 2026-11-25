@@ -1,0 +1,58 @@
+{
+	"name": "nice-ai-design",
+	"version": "0.1.0",
+	"private": true,
+	"author": "John Davey",
+	"description": "Designer workspace for building interactive designs from the NICE Design System with an AI agent",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"preview": "next dev prototype -p 3000",
+		"build": "next build prototype",
+		"catalogue": "tsx scripts/build-catalogue.ts",
+		"check": "tsx scripts/check.ts",
+		"new:sketch": "tsx scripts/new.ts sketch",
+		"new:design": "tsx scripts/new.ts design",
+		"package": "tsx scripts/package.ts",
+		"remove": "tsx scripts/remove.ts",
+		"log": "tsx scripts/log.ts",
+		"who": "tsx scripts/who.ts",
+		"new:pattern": "tsx scripts/new.ts pattern",
+		"sketchbook": "tsx scripts/sketchbook.ts",
+		"candidates": "tsx scripts/candidates.ts",
+		"sources": "tsx scripts/sources.ts"
+	},
+	"dependencies": {
+		"@nice-digital/design-system": "5.6.1",
+		"@nice-digital/icons": "6.1.7",
+		"classnames": "2.5.1",
+		"next": "15.5.29",
+		"react": "18.3.1",
+		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "4.14.0",
+		"@playwright/test": "1.65.0",
+		"@testing-library/jest-dom": "5.17.0",
+		"@testing-library/react": "13.4.0",
+		"@testing-library/user-event": "14.6.9",
+		"@types/jest": "29.5.14",
+		"@types/node": "22.20.5",
+		"@types/react": "18.3.31",
+		"@types/react-dom": "18.3.7",
+		"eslint": "8.57.1",
+		"eslint-config-next": "15.5.29",
+		"identity-obj-proxy": "3.0.0",
+		"jest": "29.7.0",
+		"jest-environment-jsdom": "29.7.0",
+		"jest-extended": "4.0.2",
+		"sass": "1.108.2",
+		"stylelint": "17.16.0",
+		"stylelint-config-standard-scss": "17.0.0",
+		"stylelint-declaration-strict-value": "1.13.0",
+		"ts-jest": "29.4.15",
+		"tsx": "4.23.15",
+		"typescript": "5.9.3"
+	}
+}

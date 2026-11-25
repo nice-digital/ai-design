@@ -1,0 +1,19 @@
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+
+.character-count {
+  margin-bottom: utils.rem(spacing.$medium);
+
+  &__message {
+    @include typography.font-size(-1);
+    color: colours.$text;
+    margin: 0;
+
+    &--over {
+      color: colours.$error;
+      font-weight: bold;
+    }
+  }
+}

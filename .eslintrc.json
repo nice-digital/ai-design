@@ -1,0 +1,53 @@
+{
+	"root": true,
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:jsx-a11y/recommended"
+	],
+	"settings": {
+		"next": {
+			"rootDir": "prototype"
+		}
+	},
+	"rules": {
+		"react/forbid-dom-props": [
+			"error",
+			{
+				"forbid": [
+					{
+						"propName": "style",
+						"message": "No inline styles: use NICE Design System components and tokens"
+					}
+				]
+			}
+		],
+		"react/forbid-component-props": [
+			"error",
+			{
+				"forbid": [
+					{
+						"propName": "style",
+						"message": "No inline styles: use NICE Design System components and tokens"
+					}
+				]
+			}
+		],
+		"@next/next/no-html-link-for-pages": "off",
+		"@next/next/no-img-element": "off",
+		"jsx-a11y/no-autofocus": "error",
+		"jsx-a11y/anchor-is-valid": "off",
+		"no-restricted-imports": [
+			"error",
+			{
+				"patterns": [
+					{
+						"group": [
+							"**/colours/tokens/global*"
+						],
+						"message": "Do not use the raw colour palette. Use alias tokens from @nice-digital/nds-core/scss/colours"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"sketchbooks": [
+		{
+			"id": "forms-and-inputs",
+			"name": "Forms and inputs",
+			"description": "Ideas for collecting text and choices"
+		},
+		{
+			"id": "design-system-candidates",
+			"name": "Design system candidates",
+			"description": "Components brought in from other NICE projects to be retrofitted for the design system"
+		},
+		{
+			"id": "john-s-ideas",
+			"name": "John's ideas",
+			"description": ""
+		}
+	]
+}

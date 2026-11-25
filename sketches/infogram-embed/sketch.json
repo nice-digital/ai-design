@@ -1,0 +1,7 @@
+{
+	"title": "Infogram embed",
+	"description": "Storyblok content block that embeds an Infogram chart with a caption, source and text alternative",
+	"status": "ready",
+	"figma": "",
+	"prompt": "add a storyblok infogram embed component to the page, with some dummy infogram data"
+}

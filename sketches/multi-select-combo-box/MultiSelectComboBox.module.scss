@@ -1,0 +1,136 @@
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/focus';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+@use '@nice-digital/nds-core/scss/visibility';
+
+.multi-select-combo-box {
+  @include typography.font-size(0);
+  color: colours.$text;
+  margin-bottom: utils.rem(spacing.$medium);
+
+  // The list sits in the normal flow under the field and pushes content down,
+  // so it can never be covered by (or cover) anything else on the page.
+  &__list {
+    background: colours.$fill-white-background;
+    border: 1px solid colours.$border-dark;
+    border-top: 0;
+    list-style: none;
+    margin: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__option {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin: 0;
+    min-height: utils.rem(spacing.$large);
+    padding: utils.rem(spacing.$small spacing.$medium);
+
+    &:hover,
+    &--active {
+      background: colours.$btn-primary;
+      color: colours.$text-inverse;
+    }
+
+    &--empty {
+      cursor: default;
+
+      &:hover {
+        background: colours.$fill-white-background;
+        color: colours.$text;
+      }
+    }
+  }
+
+  &__tick {
+    flex: 0 0 auto;
+    font-weight: bold;
+    margin-right: utils.rem(spacing.$small);
+    width: utils.rem(spacing.$medium);
+  }
+
+  &__status,
+  &__hidden {
+    @include visibility.invisible;
+  }
+
+  &__selected {
+    margin-top: utils.rem(spacing.$small);
+  }
+
+  &__selected-label {
+    font-weight: bold;
+    margin: 0 0 utils.rem(spacing.$small);
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$small);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      margin: 0;
+    }
+  }
+
+  &__chip {
+    @include typography.font-size(0);
+    align-items: center;
+    background: colours.$fill-white-background;
+    border: 1px solid colours.$border-dark;
+    color: colours.$text;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    gap: utils.rem(spacing.$small);
+    margin: 0;
+    min-height: utils.rem(spacing.$large);
+    padding: utils.rem(spacing.$x-small spacing.$small);
+    text-align: left;
+
+    &:hover {
+      background: colours.$btn-inverse-hover;
+    }
+
+    &:focus-visible {
+      @include focus.default-focus-style;
+    }
+  }
+
+  &__chip-cross {
+    font-weight: bold;
+  }
+
+  &__clear {
+    @include typography.font-size(0);
+    background: none;
+    border: 0;
+    color: colours.$link;
+    cursor: pointer;
+    font-family: inherit;
+    margin: utils.rem(spacing.$small 0 0);
+    min-height: utils.rem(spacing.$large);
+    padding: utils.rem(spacing.$x-small 0);
+    text-decoration: underline;
+
+    &:hover {
+      color: colours.$link-hover;
+    }
+
+    &:focus-visible {
+      @include focus.default-focus-style;
+    }
+  }
+}

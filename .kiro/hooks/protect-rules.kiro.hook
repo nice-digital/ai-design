@@ -1,0 +1,27 @@
+{
+	"enabled": true,
+	"name": "Protect the rules and the catalogue",
+	"description": "The catalogue, the checks and the agent rules must not be changed while designing.",
+	"version": "1",
+	"when": {
+		"type": "fileEdited",
+		"patterns": [
+			"catalogue/**/*",
+			"guidance/**/*",
+			"sources.json",
+			".kiro/skills/**/*",
+			".eslintrc.json",
+			".stylelintrc.json",
+			"playwright.config.ts",
+			"tests/**/*",
+			"scripts/**/*",
+			"jest.handover.config.js",
+			"AGENTS.md",
+			".kiro/steering/**/*"
+		]
+	},
+	"then": {
+		"type": "askAgent",
+		"prompt": "A protected file changed (the catalogue, a check, or the agent rules). If you changed it as part of design work, undo that change now with `git checkout -- <file>` and find a way to meet the rule instead. If the catalogue changed because `npm run catalogue` was run after a design system upgrade, or a design system maintainer explicitly asked for the change, leave it. Tell the designer only if a rule is blocking a real design need, and say it needs a decision from the design system team."
+	}
+}

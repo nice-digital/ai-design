@@ -1,0 +1,10 @@
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+
+.feedback-form {
+  @include typography.font-size(0);
+  color: colours.$text;
+  margin-bottom: utils.rem(spacing.$medium);
+}

@@ -1,0 +1,115 @@
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+
+.infogram-embed {
+  margin: utils.rem(spacing.$large) 0;
+
+  &__alternative {
+    margin-top: utils.rem(spacing.$medium);
+  }
+
+  &__bar {
+    display: block;
+    height: utils.rem(spacing.$large);
+    width: 100%;
+  }
+
+  &__caption {
+    @include typography.font-size(-1);
+    color: colours.$text;
+    margin: utils.rem(spacing.$small) 0 0;
+  }
+
+  &__chart {
+    background-color: colours.$fill-white-background;
+    border: 1px solid colours.$border;
+    padding: utils.rem(spacing.$medium);
+  }
+
+  &__key {
+    list-style: none;
+    margin: 0 0 utils.rem(spacing.$medium);
+    padding: 0;
+
+    @include media-queries.mq($from: sm) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: utils.rem(spacing.$small spacing.$medium);
+    }
+  }
+
+  &__key-item {
+    @include typography.font-size(-1);
+    align-items: center;
+    display: flex;
+    gap: utils.rem(spacing.$small);
+    margin: 0 0 utils.rem(spacing.$x-small);
+  }
+
+  &__label {
+    @include typography.font-size(-1);
+    color: colours.$text;
+    font-weight: bold;
+  }
+
+  &__row {
+    display: grid;
+    gap: utils.rem(spacing.$x-small);
+    margin-bottom: utils.rem(spacing.$medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-queries.mq($from: sm) {
+      align-items: center;
+      grid-template-columns: utils.rem(spacing.$xx-large) 1fr utils.rem(spacing.$xx-large * 3);
+      gap: utils.rem(spacing.$medium);
+    }
+  }
+
+  &__segment--1 {
+    fill: colours.$btn-primary;
+  }
+
+  &__segment--2 {
+    fill: colours.$border-selected;
+  }
+
+  &__segment--3 {
+    fill: colours.$btn-secondary;
+  }
+
+  &__swatch {
+    display: inline-block;
+    height: utils.rem(spacing.$medium);
+    width: utils.rem(spacing.$medium);
+
+    &--1 {
+      background-color: colours.$btn-primary;
+    }
+
+    &--2 {
+      background-color: colours.$border-selected;
+    }
+
+    &--3 {
+      background-color: colours.$btn-secondary;
+    }
+  }
+
+  &__title {
+    @include typography.font-size(1);
+    color: colours.$text;
+    font-weight: bold;
+    margin: 0 0 utils.rem(spacing.$medium);
+  }
+
+  &__values {
+    @include typography.font-size(-2);
+    color: colours.$text;
+  }
+}

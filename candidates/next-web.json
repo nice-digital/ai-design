@@ -1,0 +1,2569 @@
+{
+	"project": "next-web",
+	"projectName": "NICE website (next-web)",
+	"scannedAt": "2026-11-19T11:02:37.243Z",
+	"commit": "775a30c 2026-11-19",
+	"candidates": [
+		{
+			"name": "ResponsiveDate",
+			"path": "components/ResponsiveDate",
+			"group": "general",
+			"lines": 26,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 12,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "PublicationsDownloadLink",
+			"path": "components/PublicationsDownloadLink",
+			"group": "general",
+			"lines": 32,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-button"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 6,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data; already builds on nds-button",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "OnThisPageBasic",
+			"path": "components/OnThisPageBasic",
+			"group": "general",
+			"lines": 39,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 5,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Announcer",
+			"path": "components/Announcer",
+			"group": "general",
+			"lines": 27,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "DefinitionList",
+			"path": "components/DefinitionList",
+			"group": "general",
+			"lines": 19,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SkipLink",
+			"path": "components/SkipLink",
+			"group": "general",
+			"lines": 50,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Testimonial",
+			"path": "components/Testimonial",
+			"group": "general",
+			"lines": 127,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 2,
+			"rawValues": 14,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "candidate",
+			"note": "Used on several page types; four variants already designed",
+			"sketch": ""
+		},
+		{
+			"name": "FileSize",
+			"path": "components/FileSize",
+			"group": "general",
+			"lines": 15,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "GoogleTagManager",
+			"path": "components/GoogleTagManager",
+			"group": "general",
+			"lines": 33,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "InlineTextFilter",
+			"path": "components/InlineTextFilter",
+			"group": "general",
+			"lines": 63,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-button",
+				"nds-filters",
+				"nds-input"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data; already builds on nds-button, nds-filters, nds-input",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectUpdates",
+			"path": "components/ProjectUpdates",
+			"group": "general",
+			"lines": 54,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SearchNoResults",
+			"path": "components/SearchNoResults",
+			"group": "general",
+			"lines": 76,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SearchSections",
+			"path": "components/SearchSections",
+			"group": "general",
+			"lines": 85,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"icons",
+				"nds-panel"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data; already builds on icons, nds-panel",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SoundCloudEmbed",
+			"path": "components/SoundCloudEmbed",
+			"group": "general",
+			"lines": 17,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Test",
+			"path": "components/Test",
+			"group": "general",
+			"lines": 2,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ToFromDateFilters",
+			"path": "components/ToFromDateFilters",
+			"group": "general",
+			"lines": 162,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-button",
+				"nds-filters",
+				"nds-input"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "filters",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data; already builds on nds-button, nds-filters, nds-input",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Toggle",
+			"path": "components/Toggle",
+			"group": "general",
+			"lines": 22,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [
+				"icons"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Looks separable",
+			"why": "No ties to the project's data; already builds on icons",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokRichText",
+			"path": "components/Storyblok/StoryblokRichText",
+			"group": "cms-block",
+			"lines": 128,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokImage"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 18,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ErrorPageContent",
+			"path": "components/ErrorPageContent",
+			"group": "general",
+			"lines": 92,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-grid",
+				"nds-page-header"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"website hooks"
+			],
+			"usedIn": 15,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website hooks",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProductHorizontalNav",
+			"path": "components/ProductHorizontalNav",
+			"group": "general",
+			"lines": 109,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-horizontal-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 15,
+			"rawValues": 2,
+			"similarTo": "horizontal-nav",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokImage",
+			"path": "components/Storyblok/StoryblokImage",
+			"group": "cms-block",
+			"lines": 101,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"website utilities",
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 9,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities and the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokButtonLink",
+			"path": "components/Storyblok/StoryblokButtonLink",
+			"group": "cms-block",
+			"lines": 38,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [
+				"nds-button"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 7,
+			"rawValues": 0,
+			"similarTo": "button",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ResourceList",
+			"path": "components/ResourceList",
+			"group": "general",
+			"lines": 88,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [
+				"OnThisPage",
+				"ResourceLinkCard"
+			],
+			"tiedTo": [
+				"website utilities"
+			],
+			"usedIn": 6,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities; pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsListNav",
+			"path": "components/Storyblok/News/NewsListNav",
+			"group": "cms-block",
+			"lines": 75,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-horizontal-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 5,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectHorizontalNav",
+			"path": "components/ProjectHorizontalNav",
+			"group": "general",
+			"lines": 67,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-horizontal-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 5,
+			"rawValues": 0,
+			"similarTo": "horizontal-nav",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Metadata",
+			"path": "components/Storyblok/Metadata",
+			"group": "cms-block",
+			"lines": 26,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"website hooks",
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website hooks and the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsListPagination",
+			"path": "components/Storyblok/News/NewsListPagination",
+			"group": "cms-block",
+			"lines": 57,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-simple-pagination"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsListPaginationAnnouncer",
+			"path": "components/Storyblok/News/NewsListPaginationAnnouncer",
+			"group": "cms-block",
+			"lines": 29,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [
+				"Announcer"
+			],
+			"tiedTo": [],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsListPaginationFocus",
+			"path": "components/Storyblok/News/NewsListPaginationFocus",
+			"group": "cms-block",
+			"lines": 19,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"website hooks"
+			],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website hooks",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ResourceLinkCard",
+			"path": "components/ResourceLinkCard",
+			"group": "general",
+			"lines": 59,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card"
+			],
+			"usesLocal": [
+				"FileSize",
+				"Link"
+			],
+			"tiedTo": [
+				"website utilities"
+			],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities; pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CardGrid",
+			"path": "components/Storyblok/CardGrid",
+			"group": "cms-block",
+			"lines": 120,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card",
+				"nds-grid"
+			],
+			"usesLocal": [
+				"StoryblokCalloutCard",
+				"StoryblokTestimonialGridItem"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "OnThisPage",
+			"path": "components/OnThisPage",
+			"group": "general",
+			"lines": 101,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"Toggle"
+			],
+			"tiedTo": [
+				"website hooks"
+			],
+			"usedIn": 3,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website hooks; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokYoutubeEmbed",
+			"path": "components/Storyblok/StoryblokYoutubeEmbed",
+			"group": "cms-block",
+			"lines": 38,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 3,
+			"rawValues": 2,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CardList",
+			"path": "components/Storyblok/CardList",
+			"group": "cms-block",
+			"lines": 43,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsPageHeaderFooter",
+			"path": "components/Storyblok/NewsPageHeader/NewsPageHeaderFooter",
+			"group": "cms-block",
+			"lines": 34,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [
+				"nds-tag"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "page-header",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SearchListFilters",
+			"path": "components/SearchListFilters",
+			"group": "general",
+			"lines": 212,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-filters"
+			],
+			"usesLocal": [
+				"InlineTextFilter",
+				"SkipLink",
+				"ToFromDateFilters"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "filters",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 3 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SearchPagination",
+			"path": "components/SearchPagination",
+			"group": "general",
+			"lines": 44,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [
+				"nds-enhanced-pagination"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokAuthor",
+			"path": "components/Storyblok/StoryblokAuthor",
+			"group": "cms-block",
+			"lines": 67,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokImage"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 4,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokCalloutCard",
+			"path": "components/Storyblok/StoryblokCalloutCard",
+			"group": "cms-block",
+			"lines": 57,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card"
+			],
+			"usesLocal": [
+				"StoryblokImage"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokRelatedLink",
+			"path": "components/Storyblok/StoryblokRelatedLink",
+			"group": "cms-block",
+			"lines": 35,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokTestimonialGridItem",
+			"path": "components/Storyblok/StoryblokTestimonialGridItem",
+			"group": "cms-block",
+			"lines": 33,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokImage",
+				"Testimonial"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "AuthorList",
+			"path": "components/Storyblok/StoryblokAuthor/AuthorList",
+			"group": "cms-block",
+			"lines": 46,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokAuthor"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "BasicCardGrid",
+			"path": "components/Storyblok/BasicCardGrid",
+			"group": "cms-block",
+			"lines": 47,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card",
+				"nds-grid"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Blockquote",
+			"path": "components/Storyblok/Blockquote",
+			"group": "cms-block",
+			"lines": 24,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CardGridRow",
+			"path": "components/Storyblok/CardGridRow",
+			"group": "cms-block",
+			"lines": 28,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"CardGrid"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CardGridSection",
+			"path": "components/Storyblok/CardGridSection",
+			"group": "cms-block",
+			"lines": 89,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"CardGrid",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CardListSection",
+			"path": "components/Storyblok/CardListSection",
+			"group": "cms-block",
+			"lines": 82,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"CardList",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CopyToClipboard",
+			"path": "components/CopyToClipboard",
+			"group": "general",
+			"lines": 135,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-alert",
+				"nds-button"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"website utilities"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "HomepageHero",
+			"path": "components/Storyblok/Homepage/HomepageHero",
+			"group": "cms-block",
+			"lines": 48,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-hero"
+			],
+			"usesLocal": [
+				"StoryblokButtonLink"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "JotFormEmbed",
+			"path": "components/JotFormEmbed",
+			"group": "general",
+			"lines": 196,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"website utilities"
+			],
+			"usedIn": 1,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ListPageNav",
+			"path": "components/Guidance/ListPage/ListPageNav",
+			"group": "general",
+			"lines": 71,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-horizontal-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses page routing; pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NestedRichText",
+			"path": "components/Storyblok/NestedRichText",
+			"group": "cms-block",
+			"lines": 19,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "PromoBox",
+			"path": "components/Storyblok/PromoBox",
+			"group": "cms-block",
+			"lines": 151,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [
+				"CardGrid",
+				"StoryblokActionBannerDefault",
+				"StoryblokButtonLink",
+				"StoryblokRichText",
+				"StoryblokYoutubeEmbed"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 5 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokAccordion",
+			"path": "components/Storyblok/StoryblokAccordion",
+			"group": "cms-block",
+			"lines": 34,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-accordion"
+			],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "accordion",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokAccordionGroup",
+			"path": "components/Storyblok/StoryblokAccordionGroup",
+			"group": "cms-block",
+			"lines": 43,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-accordion"
+			],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "accordion",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokIframe",
+			"path": "components/Storyblok/StoryblokIframe",
+			"group": "cms-block",
+			"lines": 17,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokImageRichText",
+			"path": "components/Storyblok/StoryblokImageRichText",
+			"group": "cms-block",
+			"lines": 146,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [
+				"StoryblokImage",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 2 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokOrderedList",
+			"path": "components/Storyblok/StoryblokOrderedList",
+			"group": "cms-block",
+			"lines": 44,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokPanel",
+			"path": "components/Storyblok/StoryblokPanel",
+			"group": "cms-block",
+			"lines": 24,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-panel"
+			],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "panel",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokRelatedNewsLink",
+			"path": "components/Storyblok/StoryblokRelatedNewsLink",
+			"group": "cms-block",
+			"lines": 37,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokRichTextTable",
+			"path": "components/Storyblok/StoryblokRichTextTable",
+			"group": "cms-block",
+			"lines": 131,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-table"
+			],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "table",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokSectionNav",
+			"path": "components/Storyblok/StoryblokSectionNav",
+			"group": "cms-block",
+			"lines": 58,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-stacked-nav"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "CMS block: the layout may be reusable once separated from its content fields",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokTable",
+			"path": "components/Storyblok/StoryblokTable",
+			"group": "cms-block",
+			"lines": 83,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-table"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "table",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokTestimonialFullWidth",
+			"path": "components/Storyblok/StoryblokTestimonialFullWidth",
+			"group": "cms-block",
+			"lines": 39,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"Testimonial",
+				"StoryblokImage",
+				"StoryblokRelatedLink"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 3 other website components",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "FormEmbed",
+			"path": "components/Storyblok/FormEmbed",
+			"group": "cms-block",
+			"lines": 26,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"JotFormEmbed"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsPageHeader",
+			"path": "components/Storyblok/NewsPageHeader",
+			"group": "cms-block",
+			"lines": 59,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-page-header",
+				"nds-tag"
+			],
+			"usesLocal": [],
+			"tiedTo": [],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "page-header",
+			"suggestion": "Needs untangling",
+			"why": "CMS block: the layout may be reusable once separated from its content fields",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokInfogramEmbed",
+			"path": "components/Storyblok/StoryblokInfogramEmbed",
+			"group": "cms-block",
+			"lines": 190,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses the CMS (Storyblok); pulls in 1 other website component",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokTracEmbed",
+			"path": "components/Storyblok/StoryblokTracEmbed",
+			"group": "cms-block",
+			"lines": 92,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"website utilities",
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Needs untangling",
+			"why": "Uses website utilities and the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Link",
+			"path": "components/Link",
+			"group": "general",
+			"lines": 85,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"page routing",
+				"website hooks"
+			],
+			"usedIn": 35,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and website hooks",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProductPageHeading",
+			"path": "components/ProductPageHeading",
+			"group": "general",
+			"lines": 76,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-page-header"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 19,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ListPage",
+			"path": "components/Guidance/ListPage",
+			"group": "general",
+			"lines": 366,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-grid",
+				"nds-page-header",
+				"nds-table"
+			],
+			"usesLocal": [
+				"Announcer",
+				"CopyToClipboard",
+				"ErrorPageContent",
+				"Link",
+				"SearchListFilters",
+				"SearchPagination",
+				"SkipLink"
+			],
+			"tiedTo": [
+				"page routing",
+				"website hooks"
+			],
+			"usedIn": 13,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and website hooks",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "GuidanceBreadcrumb",
+			"path": "components/GuidanceBreadcrumb",
+			"group": "general",
+			"lines": 116,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [
+				"nds-breadcrumbs"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 10,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ConvertedDocument",
+			"path": "components/ConvertedDocument",
+			"group": "general",
+			"lines": 105,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-button",
+				"nds-grid"
+			],
+			"usesLocal": [
+				"ConvertedDocumentChapterMenu",
+				"ConvertedDocumentPrevNext",
+				"OnThisPageBasic"
+			],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 6,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "PublicationsChapterMenu",
+			"path": "components/PublicationsChapterMenu",
+			"group": "general",
+			"lines": 40,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-stacked-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing",
+				"NICE data feeds"
+			],
+			"usedIn": 6,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "PublicationsPrevNext",
+			"path": "components/PublicationsPrevNext",
+			"group": "general",
+			"lines": 46,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-prev-next"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing",
+				"NICE data feeds"
+			],
+			"usedIn": 6,
+			"rawValues": 0,
+			"similarTo": "prev-next",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "FeaturedStory",
+			"path": "components/Storyblok/News/FeaturedStory",
+			"group": "cms-block",
+			"lines": 87,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-tag"
+			],
+			"usesLocal": [
+				"StoryblokAuthor"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 5,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectPageHeading",
+			"path": "components/ProjectPageHeading",
+			"group": "general",
+			"lines": 108,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-page-header"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 5,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsList",
+			"path": "components/Storyblok/News/NewsList",
+			"group": "cms-block",
+			"lines": 31,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"NewsCard"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 4,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsCard",
+			"path": "components/Storyblok/News/NewsCard",
+			"group": "cms-block",
+			"lines": 126,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-tag"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 3,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProductResourceChapterPage",
+			"path": "components/ProductResourceChapterPage",
+			"group": "general",
+			"lines": 144,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [
+				"nds-alert",
+				"nds-button",
+				"nds-grid"
+			],
+			"usesLocal": [
+				"ProductHorizontalNav",
+				"ProductPageHeading",
+				"PublicationsChapterMenu",
+				"PublicationsPrevNext",
+				"GuidanceBreadcrumb",
+				"OnThisPageBasic"
+			],
+			"tiedTo": [
+				"website hooks",
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on website hooks and NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProductResourcePage",
+			"path": "components/ProductResourcePage",
+			"group": "general",
+			"lines": 153,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-alert",
+				"nds-button",
+				"nds-grid"
+			],
+			"usesLocal": [
+				"OnThisPageBasic",
+				"ProductHorizontalNav",
+				"ProductPageHeading",
+				"PublicationsChapterMenu",
+				"PublicationsPrevNext",
+				"GuidanceBreadcrumb"
+			],
+			"tiedTo": [
+				"website hooks",
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 3,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on website hooks and NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "EndorsingOrganisations",
+			"path": "components/EndorsingOrganisations",
+			"group": "general",
+			"lines": 30,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "LogosList",
+			"path": "components/LogosList",
+			"group": "general",
+			"lines": 41,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "NewsGrid",
+			"path": "components/Storyblok/News/NewsGrid",
+			"group": "cms-block",
+			"lines": 23,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"NewsCard"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "RelatedProducts",
+			"path": "components/RelatedProducts",
+			"group": "general",
+			"lines": 28,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-panel"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "SupportingOrganisations",
+			"path": "components/SupportingOrganisations",
+			"group": "general",
+			"lines": 35,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 2,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CategoryLandingPage",
+			"path": "components/Storyblok/CategoryLandingPage",
+			"group": "cms-block",
+			"lines": 39,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CategoryNavigation",
+			"path": "components/Storyblok/CategoryNavigation",
+			"group": "cms-block",
+			"lines": 37,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ConvertedDocumentChapterMenu",
+			"path": "components/ConvertedDocumentChapterMenu",
+			"group": "general",
+			"lines": 51,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-stacked-nav"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ConvertedDocumentPrevNext",
+			"path": "components/ConvertedDocumentPrevNext",
+			"group": "general",
+			"lines": 65,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-prev-next"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "prev-next",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "CorporateContentPage",
+			"path": "components/Storyblok/CorporateContentPage",
+			"group": "cms-block",
+			"lines": 52,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"ErrorPageContent"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"website hooks",
+				"website utilities",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and website hooks and website utilities and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "FormPage",
+			"path": "components/Storyblok/FormPage",
+			"group": "cms-block",
+			"lines": 56,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Homepage",
+			"path": "components/Storyblok/Homepage",
+			"group": "cms-block",
+			"lines": 96,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [],
+			"usesLocal": [
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "HomepageLatestNews",
+			"path": "components/Storyblok/Homepage/HomepageLatestNews",
+			"group": "cms-block",
+			"lines": 30,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"Link",
+				"FeaturedStory",
+				"NewsGrid"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "InfoPage",
+			"path": "components/Storyblok/InfoPage",
+			"group": "cms-block",
+			"lines": 98,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid",
+				"nds-in-page-nav"
+			],
+			"usesLocal": [
+				"StoryblokRichText",
+				"StoryblokSectionNav",
+				"Utils"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ListPageFilterSummary",
+			"path": "components/Guidance/ListPage/ListPageFilterSummary",
+			"group": "general",
+			"lines": 95,
+			"hasStyles": false,
+			"hasTests": false,
+			"builtOn": [
+				"nds-filters"
+			],
+			"usesLocal": [
+				"Link"
+			],
+			"tiedTo": [
+				"page routing",
+				"website hooks"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on page routing and website hooks",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectInformation",
+			"path": "components/ProjectInformation",
+			"group": "general",
+			"lines": 208,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"DefinitionList",
+				"Link"
+			],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectStakeholders",
+			"path": "components/ProjectStakeholders",
+			"group": "general",
+			"lines": 72,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [
+				"DefinitionList"
+			],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProjectTimelineTable",
+			"path": "components/ProjectTimelineTable",
+			"group": "general",
+			"lines": 37,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 3,
+			"similarTo": "table",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "Spotlight",
+			"path": "components/Storyblok/Spotlight",
+			"group": "cms-block",
+			"lines": 135,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card",
+				"nds-tag"
+			],
+			"usesLocal": [
+				"Link",
+				"StoryblokImage",
+				"StoryblokYoutubeEmbed",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokBlogPost",
+			"path": "components/Storyblok/StoryblokBlogPost",
+			"group": "cms-block",
+			"lines": 139,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-grid",
+				"nds-page-header"
+			],
+			"usesLocal": [
+				"NewsLetterSignup",
+				"Metadata",
+				"NewsPageHeaderFooter",
+				"AuthorList",
+				"StoryblokAuthor",
+				"StoryblokImage",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 2,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokHero",
+			"path": "components/Storyblok/StoryblokHero",
+			"group": "cms-block",
+			"lines": 53,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-hero"
+			],
+			"usesLocal": [
+				"StoryblokButtonLink"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokNewsArticle",
+			"path": "components/Storyblok/StoryblokNewsArticle",
+			"group": "cms-block",
+			"lines": 158,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-grid",
+				"nds-page-header",
+				"nds-panel"
+			],
+			"usesLocal": [
+				"NewsLetterSignup",
+				"Metadata",
+				"NewsPageHeaderFooter",
+				"StoryblokImage",
+				"StoryblokRichText"
+			],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 1,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokPageHeader",
+			"path": "components/Storyblok/StoryblokPageHeader",
+			"group": "cms-block",
+			"lines": 54,
+			"hasStyles": true,
+			"hasTests": false,
+			"builtOn": [
+				"nds-breadcrumbs",
+				"nds-page-header"
+			],
+			"usesLocal": [
+				"StoryblokButtonLink"
+			],
+			"tiedTo": [
+				"NICE data feeds",
+				"the CMS (Storyblok)"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "page-header",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds and the CMS (Storyblok)",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "StoryblokTracPage",
+			"path": "components/Storyblok/StoryblokTracPage",
+			"group": "cms-block",
+			"lines": 56,
+			"hasStyles": true,
+			"hasTests": true,
+			"builtOn": [
+				"nds-grid"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"the CMS (Storyblok)",
+				"NICE data feeds"
+			],
+			"usedIn": 1,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on the CMS (Storyblok) and NICE data feeds",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "InDevProjectCard",
+			"path": "components/InDevProjectCard",
+			"group": "general",
+			"lines": 58,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		},
+		{
+			"name": "ProductCard",
+			"path": "components/ProductCard",
+			"group": "general",
+			"lines": 52,
+			"hasStyles": false,
+			"hasTests": true,
+			"builtOn": [
+				"nds-card"
+			],
+			"usesLocal": [],
+			"tiedTo": [
+				"NICE data feeds",
+				"website utilities"
+			],
+			"usedIn": 0,
+			"rawValues": 0,
+			"similarTo": "",
+			"suggestion": "Tied to the website",
+			"why": "Depends on NICE data feeds and website utilities",
+			"triage": "undecided",
+			"note": "",
+			"sketch": ""
+		}
+	]
+}

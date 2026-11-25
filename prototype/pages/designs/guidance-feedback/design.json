@@ -1,0 +1,6 @@
+{
+	"title": "Guidance feedback",
+	"description": "Filter a list of guidance and send feedback on it",
+	"figma": "",
+	"prompt": "Design a page called \"Diabetes guidance\". It lists guidance as cards showing the title, a one-line summary, the type and the publication date. On the left there is a filter panel with one group, \"Type\", with options for NICE guideline, Technology appraisal and Quality standard. Ticking options filters the list straight away. Above the list, show how many results are showing and the active filters, each removable. Below the list add a section \"Tell us what is missing\" with a text box limited to 300 characters that shows how many characters are left, and a Send feedback button. After sending, replace the form with a thank you message. Use four realistic example items."
+}

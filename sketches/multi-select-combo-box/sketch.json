@@ -1,0 +1,10 @@
+{
+	"title": "Multi select combo box",
+	"description": "A filter field where people type to narrow a list and choose several options, shown as removable tags",
+	"type": "component",
+	"status": "sketch",
+	"figma": "",
+	"prompt": "make a sketch in this sketchbook of a multi select combo filter component - use GDS if there is an example there",
+	"source": "",
+	"sketchbook": "john-s-ideas"
+}

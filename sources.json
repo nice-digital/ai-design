@@ -1,0 +1,43 @@
+{
+	"about": "Every outside source this workspace may draw on. Anything not listed here is off limits to the agent. Git projects are fetched read-only into .sources/ by `npm run sources -- sync`. See .kiro/steering/sources.md.",
+	"projects": [
+		{
+			"id": "nice-design-system",
+			"name": "NICE Design System",
+			"git": "git@github.com:nice-digital/nice-design-system.git",
+			"branch": "main",
+			"use": "design-system-docs",
+			"about": "The design system's own repository. Used only for the 'when to use' guidance in its docs, which is added to the catalogue. Components themselves come from the published packages."
+		},
+		{
+			"id": "next-web",
+			"name": "NICE website (next-web)",
+			"git": "https://github.com/nice-digital/next-web.git",
+			"branch": "main",
+			"use": "candidates",
+			"sourceRoot": "web/src",
+			"components": "components",
+			"about": "The main NICE website. Scanned for components that could be retrofitted into the design system. Also the reference for how production code is written, since designs are ported to it."
+		},
+		{
+			"id": "global-nav",
+			"name": "Global nav",
+			"git": "https://github.com/nice-digital/global-nav.git",
+			"branch": "master",
+			"use": "candidates",
+			"sourceRoot": "src",
+			"components": ".",
+			"about": "The NICE header and footer used on every site. Designs never rebuild the header or footer: they are out of scope. Scanned so the agent knows what the site chrome provides and for pieces that might belong in the design system."
+		}
+	],
+	"references": [
+		{ "name": "GOV.UK Design System", "url": "https://design-system.service.gov.uk/", "use": "Patterns and component behaviour. Summarised in guidance/govuk-patterns.md" },
+		{ "name": "GOV.UK style guide and content design", "url": "https://www.gov.uk/guidance/style-guide/", "use": "Wording" },
+		{ "name": "GOV.UK Service Manual", "url": "https://www.gov.uk/service-manual/", "use": "Service standard, accessibility and research practice" },
+		{ "name": "NHS digital service manual", "url": "https://service-manual.nhs.uk/", "use": "Health-specific patterns and content style" },
+		{ "name": "MOJ design patterns", "url": "https://design-patterns.service.justice.gov.uk/", "use": "Patterns for professional and case-working tools" },
+		{ "name": "HMRC design patterns", "url": "https://design.tax.service.gov.uk/", "use": "Patterns for complex transactions" },
+		{ "name": "WCAG 2.2", "url": "https://www.w3.org/TR/WCAG22/", "use": "The accessibility standard, and https://www.w3.org/WAI/WCAG22/Understanding/ for what each criterion means" },
+		{ "name": "NICE Design System docs", "url": "https://design-system.nice.org.uk/", "use": "Published guidance for the design system" }
+	]
+}

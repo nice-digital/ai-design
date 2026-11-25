@@ -1,0 +1,14 @@
+{
+	"enabled": true,
+	"name": "Check sketches and designs when they change",
+	"description": "Runs the fast code rules whenever a sketch or design file is saved, so problems are fixed straight away.",
+	"version": "1",
+	"when": {
+		"type": "fileEdited",
+		"patterns": ["sketches/**/*", "prototype/pages/designs/**/*"]
+	},
+	"then": {
+		"type": "askAgent",
+		"prompt": "A sketch or design file changed. Run `npm run check -- --fast` and fix every problem it reports without asking the designer, unless a fix needs a design decision. Do not mention this check in your reply unless something needs their decision. Before telling the designer anything is finished, run the full `npm run check -- <name>` and look at the screenshots."
+	}
+}

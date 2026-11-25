@@ -1,0 +1,57 @@
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/focus';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+@use '@nice-digital/nds-core/scss/visibility';
+
+.combo-box {
+  @include typography.font-size(0);
+  color: colours.$text;
+  margin-bottom: utils.rem(spacing.$medium);
+  position: relative;
+
+  &__list {
+    background: colours.$fill-white-background;
+    border: 1px solid colours.$border-dark;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+    margin: 0;
+    min-height: utils.rem(spacing.$large);
+    padding: utils.rem(spacing.$small spacing.$medium);
+
+    &:hover,
+    &--active {
+      background: colours.$btn-primary;
+      color: colours.$text-inverse;
+    }
+
+    &--empty {
+      cursor: default;
+
+      &:hover {
+        background: colours.$fill-white-background;
+        color: colours.$text;
+      }
+    }
+  }
+
+  &__status {
+    @include visibility.invisible;
+  }
+}

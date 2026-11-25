@@ -1,0 +1,852 @@
+// The workspace's own chrome. Designs and sketches never edit this file.
+//
+// Look: a studio logbook. Deep NICE blue masthead, cream paper, hairline rules,
+// serif headings, small tracked labels. Everything comes from nds-core tokens.
+@use 'sass:color';
+@use '@nice-digital/nds-core/scss/colours';
+@use '@nice-digital/nds-core/scss/colours/tokens/global';
+@use '@nice-digital/nds-core/scss/focus';
+@use '@nice-digital/nds-core/scss/media-queries';
+@use '@nice-digital/nds-core/scss/spacing';
+@use '@nice-digital/nds-core/scss/typography';
+@use '@nice-digital/nds-core/scss/utils';
+
+$ws-ink: global.$nice-blue;
+$ws-ink-deep: global.$nice-blue-tint-4;
+$ws-paper: global.$nice-cream-tint-1;
+$ws-paper-warm: global.$nice-cream-3;
+$ws-rule: global.$nice-black;
+$ws-rule-soft: global.$nice-cream-1;
+$ws-accent: global.$nice-teal;
+$ws-muted: global.$black-tint-1;
+$ws-max: 72rem;
+
+@mixin ws-label {
+  @include typography.font-size(-2);
+  font-family: var(--sans-font-family);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+@keyframes ws-rise {
+  from {
+    opacity: 0;
+    transform: translateY(utils.rem(spacing.$small));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Thin bar above a design or sketch
+// ---------------------------------------------------------------------------
+
+.ws-bar {
+  @include typography.font-size(-1);
+  align-items: baseline;
+  background: $ws-ink;
+  color: colours.$text-inverse;
+  display: flex;
+  flex-wrap: wrap;
+  gap: utils.rem(spacing.$x-small spacing.$medium);
+  padding: utils.rem(spacing.$small spacing.$medium);
+
+  a {
+    @include typography.link-inverse;
+    // comfortably tappable
+    display: inline-block;
+    padding: utils.rem(spacing.$xx-small 0);
+  }
+
+  &__note {
+    color: global.$nice-blue-tint-3;
+
+    @include media-queries.mq($from: sm) {
+      margin-left: auto;
+    }
+  }
+}
+
+.ws-design {
+  padding-bottom: utils.rem(spacing.$x-large);
+  padding-top: utils.rem(spacing.$large);
+}
+
+// ---------------------------------------------------------------------------
+// Workspace pages
+// ---------------------------------------------------------------------------
+
+.ws {
+  background: $ws-paper;
+  min-height: 100vh;
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+}
+
+.ws-label {
+  @include ws-label;
+  color: $ws-muted;
+  display: block;
+  margin-bottom: utils.rem(spacing.$xx-small);
+}
+
+.ws-masthead {
+  // Faint ruled columns over deep blue, like a ledger page
+  background-color: $ws-ink;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(#{utils.rem(spacing.$xx-large)} - 1px),
+      color.adjust(global.$white, $alpha: -0.93) calc(#{utils.rem(spacing.$xx-large)} - 1px),
+      color.adjust(global.$white, $alpha: -0.93) #{utils.rem(spacing.$xx-large)}
+    ),
+    linear-gradient(160deg, $ws-ink 0%, $ws-ink-deep 100%);
+  border-bottom: utils.rem(spacing.$x-small) solid $ws-accent;
+  color: colours.$text-inverse;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: $ws-max;
+    padding: utils.rem(spacing.$large spacing.$medium);
+
+    @include media-queries.mq($from: md) {
+      padding: utils.rem(spacing.$xx-large spacing.$large spacing.$x-large);
+    }
+  }
+
+  &__kicker {
+    @include ws-label;
+    color: global.$nice-teal-tint-2;
+    margin: utils.rem(0 0 spacing.$small);
+
+    a {
+      @include typography.link-inverse;
+    }
+  }
+
+  &__title {
+    @include typography.font-size(5);
+    animation: ws-rise 0.5s ease-out both;
+    font-family: var(--serif-font-family);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    max-width: 18ch;
+
+    @include media-queries.mq($from: md) {
+      @include typography.font-size(6);
+      line-height: 1;
+    }
+  }
+
+  &__lead {
+    @include typography.font-size(1);
+    animation: ws-rise 0.5s 0.08s ease-out both;
+    color: global.$nice-blue-tint-3;
+    margin: utils.rem(spacing.$medium 0 0);
+    max-width: 46ch;
+  }
+
+  &__actions {
+    animation: ws-rise 0.5s 0.16s ease-out both;
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$small);
+    margin: utils.rem(spacing.$large 0 0);
+  }
+}
+
+.ws-tally {
+  animation: ws-rise 0.5s 0.16s ease-out both;
+  border-top: 1px solid color.adjust(global.$white, $alpha: -0.75);
+  display: flex;
+  flex-wrap: wrap;
+  gap: utils.rem(spacing.$medium spacing.$x-large);
+  margin: utils.rem(spacing.$large 0 0);
+  padding-top: utils.rem(spacing.$medium);
+
+  div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  dt {
+    @include ws-label;
+    color: global.$nice-teal-tint-2;
+  }
+
+  dd {
+    @include typography.font-size(4);
+    font-family: var(--serif-font-family);
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+.ws-button {
+  @include typography.font-size(0);
+  background: colours.$btn-cta;
+  color: colours.$btn-cta-text;
+  display: inline-block;
+  font-weight: 600;
+  padding: utils.rem(spacing.$small spacing.$medium);
+  text-decoration: none;
+
+  &:hover {
+    background: colours.$btn-cta-hover;
+    color: colours.$btn-cta-text;
+  }
+
+  &:focus {
+    @include focus.inverse-focus-style;
+  }
+
+  &:visited {
+    color: colours.$btn-cta-text;
+  }
+
+  &--dark {
+    background: $ws-ink;
+    border: 0;
+    color: colours.$text-inverse;
+    cursor: pointer;
+
+    &:hover {
+      background: $ws-ink-deep;
+      color: colours.$text-inverse;
+    }
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+
+  &--danger {
+    background: colours.$error;
+    border: 0;
+    color: colours.$text-inverse;
+    cursor: pointer;
+
+    &:hover,
+    &:visited {
+      color: colours.$text-inverse;
+    }
+
+    &:hover {
+      background: $ws-ink;
+    }
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+
+  &--quiet {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px global.$nice-blue-tint-2;
+    color: colours.$text-inverse;
+
+    &:hover {
+      background: color.adjust(global.$white, $alpha: -0.9);
+      color: colours.$text-inverse;
+    }
+
+    &:visited {
+      color: colours.$text-inverse;
+    }
+  }
+}
+
+.ws-page {
+  margin: 0 auto;
+  max-width: $ws-max;
+  padding: utils.rem(spacing.$medium spacing.$medium spacing.$xx-large);
+
+  @include media-queries.mq($from: md) {
+    padding: utils.rem(spacing.$large spacing.$large spacing.$xx-large);
+  }
+}
+
+.ws-section {
+  margin-top: utils.rem(spacing.$large);
+
+  @include media-queries.mq($from: md) {
+    margin-top: utils.rem(spacing.$x-large);
+  }
+
+  &__head {
+    align-items: baseline;
+    border-bottom: 2px solid $ws-rule;
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$xx-small spacing.$medium);
+    padding-bottom: utils.rem(spacing.$small);
+
+    h2 {
+      @include typography.font-size(3);
+      font-family: var(--serif-font-family);
+      line-height: 1.1;
+    }
+
+    p {
+      @include typography.font-size(-1);
+      color: $ws-muted;
+      margin: 0;
+    }
+  }
+}
+
+.ws-ledger > li,
+.ws-log > li,
+.ws-sheet > li {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.ws-empty {
+  @include typography.font-size(0);
+  color: $ws-muted;
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: 60ch;
+}
+
+// Ledger: one row per sketch or design
+.ws-ledger {
+  list-style: none;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+
+.ws-entry {
+  animation: ws-rise 0.45s ease-out both;
+  border-bottom: 1px solid $ws-rule-soft;
+  display: grid;
+  gap: utils.rem(spacing.$small spacing.$large);
+  padding: utils.rem(spacing.$medium 0);
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{0.05s * $i};
+    }
+  }
+
+  @include media-queries.mq($from: md) {
+    grid-template-columns: utils.rem(spacing.$x-large) minmax(0, 1fr) minmax(0, 20rem);
+    padding: utils.rem(spacing.$large 0);
+  }
+
+  &__number {
+    @include typography.font-size(1);
+    color: $ws-accent;
+    font-family: var(--serif-font-family);
+    font-style: italic;
+  }
+
+  &__title {
+    @include typography.font-size(2);
+    font-family: var(--serif-font-family);
+    line-height: 1.2;
+
+    a {
+      color: colours.$text;
+      text-decoration-color: $ws-accent;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+
+      &:hover {
+        color: $ws-ink;
+        text-decoration-thickness: 4px;
+      }
+
+      &:focus {
+        @include focus.default-focus-style;
+      }
+    }
+  }
+
+  &__description {
+    margin: utils.rem(spacing.$x-small 0 0);
+    max-width: 56ch;
+  }
+
+  &__decision {
+    @include typography.font-size(-1);
+    border-left: 3px solid $ws-accent;
+    margin: utils.rem(spacing.$medium 0 0);
+    max-width: 56ch;
+    padding-left: utils.rem(spacing.$small);
+  }
+
+  &__when {
+    color: $ws-muted;
+    display: block;
+  }
+
+  &__side {
+    @include typography.font-size(-1);
+    display: flex;
+    flex-direction: column;
+    gap: utils.rem(spacing.$x-small);
+  }
+
+  &__fact {
+    color: $ws-muted;
+    margin: 0;
+  }
+
+  &__more {
+    align-self: flex-start;
+    margin-top: utils.rem(spacing.$x-small);
+  }
+}
+
+// The request that produced a sketch or design
+.ws-prompt {
+  @include typography.font-size(-1);
+  margin: utils.rem(spacing.$small 0 0);
+  max-width: 56ch;
+
+  summary {
+    color: colours.$link;
+    cursor: pointer;
+    padding: utils.rem(spacing.$xx-small 0);
+    text-decoration: underline;
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+
+  blockquote {
+    background: $ws-paper-warm;
+    border: 0;
+    margin: utils.rem(spacing.$x-small 0 0);
+    padding: utils.rem(spacing.$small spacing.$medium);
+  }
+}
+
+.ws-request {
+  @include typography.font-size(1);
+  background: $ws-paper-warm;
+  border: 0;
+  border-left: utils.rem(spacing.$x-small) solid $ws-accent;
+  font-family: var(--serif-font-family);
+  line-height: 1.5;
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: 62ch;
+  padding: utils.rem(spacing.$medium spacing.$large);
+}
+
+// A sketchbook: a named group of sketches
+.ws-book {
+  margin-top: utils.rem(spacing.$large);
+
+  &__head {
+    align-items: baseline;
+    background: $ws-paper-warm;
+    border-left: utils.rem(spacing.$x-small) solid $ws-ink;
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$xx-small spacing.$medium);
+    padding: utils.rem(spacing.$small spacing.$medium);
+
+    h3 {
+      @include typography.font-size(1);
+      font-family: var(--serif-font-family);
+    }
+
+    p {
+      @include typography.font-size(-1);
+      color: $ws-muted;
+      margin: 0;
+    }
+  }
+}
+
+.ws-memory {
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: 70ch;
+
+  &__when {
+    @include typography.font-size(-1);
+    color: $ws-muted;
+  }
+}
+
+.ws-notice {
+  background: colours.$success-background;
+  border-left: utils.rem(spacing.$x-small) solid colours.$success;
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: 40rem;
+  padding: utils.rem(spacing.$small spacing.$medium);
+
+  &--error {
+    background: colours.$error-background;
+    border-left-color: colours.$error;
+  }
+
+  &__detail {
+    @include typography.font-size(-1);
+    display: block;
+    margin-top: utils.rem(spacing.$x-small);
+    overflow-wrap: anywhere;
+  }
+}
+
+// What a pattern, sketch or design is made from
+.ws-parts {
+  list-style: none;
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: 40rem;
+  padding: 0;
+
+  li {
+    align-items: baseline;
+    border-bottom: 1px solid $ws-rule-soft;
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$xx-small spacing.$medium);
+    justify-content: space-between;
+    padding: utils.rem(spacing.$small 0);
+  }
+
+  &__from {
+    @include typography.font-size(-1);
+    color: $ws-muted;
+  }
+}
+
+// The "are you sure" step before deleting
+.ws-confirm {
+  background: colours.$error-background;
+  border-left: utils.rem(spacing.$x-small) solid colours.$error;
+  margin-top: utils.rem(spacing.$medium);
+  max-width: 40rem;
+  padding: utils.rem(spacing.$medium);
+
+  h3 {
+    @include typography.font-size(1);
+    margin-top: 0;
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.rem(spacing.$small spacing.$medium);
+    margin: utils.rem(spacing.$medium 0 0);
+  }
+}
+
+.ws-form {
+  margin-top: utils.rem(spacing.$medium);
+  max-width: 40rem;
+
+  &__field {
+    margin-bottom: utils.rem(spacing.$medium);
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: utils.rem(spacing.$x-small);
+  }
+
+  input[type='text'] {
+    @include typography.font-size(0);
+    background: colours.$fill-white-background;
+    border: 2px solid $ws-rule;
+    padding: utils.rem(spacing.$small);
+    width: 100%;
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+}
+
+// Candidates from other projects
+.ws-fold {
+  border-bottom: 1px solid $ws-rule-soft;
+
+  summary {
+    cursor: pointer;
+    padding: utils.rem(spacing.$medium 0);
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+
+  &__title {
+    @include typography.font-size(1);
+    font-family: var(--serif-font-family);
+    font-weight: 600;
+  }
+
+  &__intro {
+    @include typography.font-size(-1);
+    color: $ws-muted;
+    display: block;
+    margin-top: utils.rem(spacing.$xx-small);
+    max-width: 70ch;
+  }
+}
+
+.ws-candidates {
+  list-style: none;
+  margin: 0;
+  max-width: none;
+  padding: utils.rem(0 0 spacing.$medium);
+}
+
+.ws-candidate {
+  border-top: 1px solid $ws-rule-soft;
+  display: grid;
+  gap: utils.rem(spacing.$x-small spacing.$large);
+  margin: 0;
+  max-width: none;
+  padding: utils.rem(spacing.$small 0);
+
+  @include media-queries.mq($from: md) {
+    grid-template-columns: 16rem minmax(0, 1fr) 16rem;
+  }
+
+  &__name {
+    @include typography.font-size(0);
+    font-family: var(--sans-font-family);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__path {
+    @include typography.font-size(-2);
+    color: $ws-muted;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  &__found,
+  &__view {
+    @include typography.font-size(-1);
+    margin: 0;
+  }
+
+  &__view {
+    display: flex;
+    flex-direction: column;
+    gap: utils.rem(spacing.$xx-small);
+
+    span {
+      color: $ws-muted;
+    }
+  }
+}
+
+// Check result: a mark and plain words. Never colour alone.
+.ws-status {
+  @include typography.font-size(0);
+  align-items: baseline;
+  display: inline-flex;
+  font-weight: 600;
+  gap: utils.rem(spacing.$small);
+
+  &__mark {
+    border: 2px solid $ws-rule;
+    border-radius: 50%;
+    flex: none;
+    height: 0.75em;
+    transform: translateY(0.05em);
+    width: 0.75em;
+  }
+
+  &__count {
+    font-weight: normal;
+  }
+
+  &--passed &__mark {
+    background: $ws-accent;
+    border-color: $ws-accent;
+  }
+
+  &--partly &__mark {
+    background: linear-gradient(90deg, $ws-accent 50%, transparent 50%);
+    border-color: $ws-accent;
+  }
+
+  &--failed &__mark {
+    background: colours.$error;
+    border-color: colours.$error;
+    border-radius: 0;
+  }
+
+  &--stale &__mark {
+    border-color: colours.$caution;
+    border-style: dashed;
+  }
+}
+
+.ws-checks {
+  margin-top: utils.rem(spacing.$medium);
+  max-width: 70ch;
+
+  &__result {
+    @include typography.font-size(1);
+  }
+
+  h3 {
+    @include typography.font-size(1);
+    font-family: var(--serif-font-family);
+    margin-top: utils.rem(spacing.$large);
+  }
+}
+
+.ws-findings {
+  list-style: none;
+  margin: utils.rem(spacing.$small 0 0);
+  max-width: none;
+  padding: 0;
+
+  li {
+    background: colours.$error-background;
+    border-left: utils.rem(spacing.$x-small) solid colours.$error;
+    margin-bottom: utils.rem(spacing.$small);
+    overflow-wrap: anywhere;
+    padding: utils.rem(spacing.$small spacing.$medium);
+  }
+
+  &--notes li {
+    background: colours.$caution-background;
+    border-left-color: colours.$caution;
+  }
+}
+
+// Contact sheet of screenshots, smallest first
+.ws-sheet {
+  align-items: flex-start;
+  display: flex;
+  gap: utils.rem(spacing.$medium);
+  list-style: none;
+  margin: utils.rem(spacing.$medium 0 0);
+  max-width: none;
+  overflow-x: auto;
+  padding: utils.rem(spacing.$xx-small spacing.$xx-small spacing.$medium);
+
+  &__frame {
+    flex: none;
+  }
+
+  a {
+    background: colours.$fill-white-background;
+    box-shadow:
+      0 0 0 1px $ws-rule-soft,
+      utils.rem(spacing.$x-small) utils.rem(spacing.$x-small) 0 $ws-paper-warm;
+    display: block;
+    max-height: 26rem;
+    overflow: hidden;
+
+    &:focus {
+      @include focus.default-focus-style;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: none;
+    width: 10rem;
+  }
+
+  // Wider screens get proportionally wider thumbnails
+  &__frame:nth-child(n + 3) img {
+    width: 14rem;
+  }
+
+  &__frame:nth-child(n + 5) img {
+    width: 20rem;
+  }
+
+  &__caption {
+    @include ws-label;
+    color: $ws-muted;
+    display: block;
+    margin-top: utils.rem(spacing.$small);
+  }
+}
+
+// Decisions and session notes: dates in the margin
+.ws-log {
+  list-style: none;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+
+  &__entry {
+    border-bottom: 1px solid $ws-rule-soft;
+    display: grid;
+    gap: utils.rem(spacing.$x-small spacing.$large);
+    padding: utils.rem(spacing.$medium 0);
+
+    @include media-queries.mq($from: md) {
+      grid-template-columns: 12rem minmax(0, 60ch);
+    }
+  }
+
+  &__when {
+    @include typography.font-size(-1);
+    color: $ws-muted;
+    margin: 0;
+
+    time {
+      color: colours.$text;
+      display: block;
+      font-family: var(--serif-font-family);
+      font-style: italic;
+    }
+  }
+
+  &__what {
+    @include typography.font-size(1);
+    font-family: var(--serif-font-family);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  &__why {
+    color: $ws-muted;
+    margin: utils.rem(spacing.$x-small 0 0);
+  }
+}
+
+.ws-note {
+  margin: 0;
+
+  dt {
+    @include ws-label;
+    color: $ws-muted;
+  }
+
+  dd {
+    margin: utils.rem(0 0 spacing.$small);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ws-masthead__title,
+  .ws-masthead__lead,
+  .ws-masthead__actions,
+  .ws-tally,
+  .ws-entry {
+    animation: none;
+  }
+}

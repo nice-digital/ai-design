@@ -1,0 +1,9 @@
+{
+	"title": "Feedback form",
+	"description": "A question with a character-limited answer and a send button",
+	"type": "pattern",
+	"status": "ready",
+	"figma": "",
+	"prompt": "Make a pattern for asking one short feedback question at the end of a page: the question, a text box with a character limit and a count, and a send button. After sending, show a thank you message in its place.",
+	"source": ""
+}

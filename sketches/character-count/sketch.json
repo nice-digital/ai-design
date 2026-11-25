@@ -1,0 +1,10 @@
+{
+	"title": "Character count",
+	"description": "Text area that tells people how many characters they have left",
+	"status": "ready",
+	"figma": "",
+	"prompt": "Sketch a text box that tells people how many characters they have left as they type. It should never stop them typing: if they go over the limit, show an error and say how many characters to remove. Show it empty and over the limit.",
+	"type": "component",
+	"source": "",
+	"sketchbook": "forms-and-inputs"
+}
