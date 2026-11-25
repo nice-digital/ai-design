@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Greet the designer",
+      "trigger": "SessionStart",
+      "description": "Greets the designer by first name and shows a few example requests when a session opens",
+      "action": {
+        "type": "agent",
+        "prompt": "At the start of the session, before anything else: activate the caveman skill and follow it (see the brevity steering). Then run `npm run who`. If it gives a name, greet that person by first name in one short line. If no name is set, ask once for their name (as described in the decisions steering), run `npm run who -- \"Their Name\"`, then greet them. Then show this list of examples, exactly as short as this, and nothing more:\n\nTry asking for:\n- Make a new sketch\n- Make a new design\n- New sketchbook: <name>\n- Build this Figma frame: <link>\n- What can I use?\n- Save this\n- Show me\n\nDo not explain the list, do not ask which one they want, and do not start any work until they reply. Plain English, sentence case, no emoji, no exclamation marks."
+      }
+    }
+  ]
+}
