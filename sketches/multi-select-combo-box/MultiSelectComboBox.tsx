@@ -65,12 +65,24 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 	const statusId = `${id}-status`;
 	const selectedLabelId = `${id}-selected`;
 	const inputRef = useRef<HTMLInputElement>(null);
+	const skipOpenOnFocus = useRef(false);
 
 	const [query, setQuery] = useState("");
 	const [selected, setSelected] = useState<string[]>(defaultValue);
 	const [isOpen, setIsOpen] = useState(defaultOpen);
 	const [activeIndex, setActiveIndex] = useState(-1);
 	const [announcement, setAnnouncement] = useState("");
+
+	// The field shows the chosen options as a comma separated list, followed by
+	// whatever the person is typing to narrow the list
+	// The separator only appears once something is typed after the last choice
+	const chosenText = selected.join(", ");
+	const fieldValue =
+		query === "" || chosenText === ""
+			? `${chosenText}${query}`
+			: `${chosenText}, ${query}`;
+	// The error no longer applies once at least one option is chosen
+	const visibleError = selected.length === 0 ? errorMessage : undefined;
 
 	const search = query.trim().toLowerCase();
 	const canSearch = search.length >= minLength;
@@ -97,6 +109,72 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 		} else {
 			update([...selected, option], `${option} added`);
 		}
+		// The choice now shows in the field, so the typed text starts again
+		setQuery("");
+		setActiveIndex(-1);
+	};
+
+	// Typing happens after the comma separated choices. Editing into the
+	// choices removes the ones that were broken, and backspace over the
+	// separator removes the last choice.
+	const handleInputChange = (value: string) => {
+		// Typing straight after the last choice, before the separator is shown
+		if (
+			query === "" &&
+			selected.length > 0 &&
+			value.length > chosenText.length &&
+			value.startsWith(chosenText)
+		) {
+			setQuery(value.slice(chosenText.length).replace(/^[,\s]+/, ""));
+			setAnnouncement("");
+			setIsOpen(true);
+			setActiveIndex(-1);
+			return;
+		}
+		const parts = value.split(",");
+		const typed = (parts.pop() ?? "").replace(/^\s+/, "");
+		const kept = parts
+			.map((part) => part.trim())
+			.filter((part) => selected.includes(part));
+		const unchanged =
+			kept.length === selected.length &&
+			kept.every((item, index) => item === selected[index]);
+
+		if (!unchanged) {
+			const removed = selected.filter((item) => !kept.includes(item));
+			update(
+				kept,
+				removed.length === 1 ? `${removed[0]} removed` : "Choices removed"
+			);
+			setQuery(typed);
+		} else if (
+			typed === "" &&
+			query === "" &&
+			selected.length > 0 &&
+			value.length < fieldValue.length
+		) {
+			const last = selected[selected.length - 1];
+			update(selected.slice(0, -1), `${last} removed`);
+			setQuery("");
+			setIsOpen(true);
+			setActiveIndex(-1);
+			return;
+		} else {
+			setQuery(typed);
+			setAnnouncement("");
+		}
+		setIsOpen(true);
+		setActiveIndex(-1);
+	};
+
+	// Return focus to the field after removing. A closed list stays closed and
+	// an open list stays open.
+	const focusInputWithoutOpening = () => {
+		const wasOpen = isOpen;
+		skipOpenOnFocus.current = true;
+		inputRef.current?.focus();
+		skipOpenOnFocus.current = false;
+		setIsOpen(wasOpen);
 	};
 
 	const remove = (option: string) => {
@@ -104,12 +182,12 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 			selected.filter((item) => item !== option),
 			`${option} removed`
 		);
-		inputRef.current?.focus();
+		focusInputWithoutOpening();
 	};
 
 	const clearAll = () => {
 		update([], "All cleared");
-		inputRef.current?.focus();
+		focusInputWithoutOpening();
 	};
 
 	let status = announcement;
@@ -173,10 +251,10 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 					label={label}
 					name={`${name}-search`}
 					hint={hint}
-					error={Boolean(errorMessage)}
-					errorMessage={errorMessage}
+					error={Boolean(visibleError)}
+					errorMessage={visibleError}
 					inputRef={inputRef}
-					value={query}
+					value={fieldValue}
 					autoComplete="off"
 					role="combobox"
 					aria-autocomplete="list"
@@ -186,13 +264,15 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 						showList && activeIndex >= 0 ? optionId(activeIndex) : undefined
 					}
 					aria-describedby={statusId}
-					onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-						setQuery(e.target.value);
-						setIsOpen(true);
-						setActiveIndex(-1);
-						setAnnouncement("");
+					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+						handleInputChange(e.target.value)
+					}
+					onFocus={() => {
+						if (!skipOpenOnFocus.current) setIsOpen(true);
 					}}
-					onFocus={() => setIsOpen(true)}
+					// The field may already have focus (for example after removing a
+					// tag), so a click must open the list as well as focus
+					onClick={() => setIsOpen(true)}
 					onKeyDown={handleKeyDown}
 					{...rest}
 				/>
@@ -284,6 +364,8 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 								<button
 									type="button"
 									className={styles["multi-select-combo-box__chip"]}
+									// Stops the click closing an open list in browsers that blur the field
+									onMouseDown={(e) => e.preventDefault()}
 									onClick={() => remove(option)}
 								>
 									{option}
@@ -305,6 +387,7 @@ export const MultiSelectComboBox: React.FC<MultiSelectComboBoxProps> = (
 						<button
 							type="button"
 							className={styles["multi-select-combo-box__clear"]}
+							onMouseDown={(e) => e.preventDefault()}
 							onClick={clearAll}
 						>
 							Clear all
